@@ -8,9 +8,8 @@ __human_name__ = 'arguments'
 # Add your code after this line
 
 
-def greet(name=str, greeting_template=f"Hello, <name>"):
-    greeting_template = f'Hello, {name}!'
-    return greeting_template
+def greet(name, greeting_template=f"Hello, <name>"):
+    return greeting_template.replace("<name>", name)
 
 
 def force(mass=float, body="earth"):
@@ -25,3 +24,5 @@ def pull(m1, m2, d):
     pull = 6.674e-11 * ((m1*m2)/d**2)
     return pull
 
+
+print(greet("Jordy"))
